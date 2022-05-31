@@ -1,0 +1,5 @@
+rootProject.name = 'vueGradle'
+include 'api'
+include 'biz'
+include 'www'
+

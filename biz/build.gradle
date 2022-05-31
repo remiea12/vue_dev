@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    id 'war'
+}
+
+group 'com.vue'
+version '1.0-SNAPSHOT'
+
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    compileOnly ("org.springframework.boot:spring-boot-devtools")
+
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation group: 'org.apache.poi', name: 'poi-ooxml', version: '3.9'
+    implementation ('org.apache.poi:poi:3.17')
+
+    //testCompile('org.springframework.boot:spring-boot-starter-test')
+
+    // https://mvnrepository.com/artifact/org.postgresql/postgresql
+    implementation group: 'org.postgresql', name: 'postgresql', version: '42.2.20'
+}
